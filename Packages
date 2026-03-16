@@ -1,0 +1,7 @@
+Package: windex-core
+Version: 1.1
+Architecture: all
+Maintainer: Muhammed Mirac Ozkan <mirac@windex.com>
+Filename: ./windex-core.deb
+Size: (dosyanın byte cinsinden boyutu)
+Description: Windex OS Ara güncelleme paketi
