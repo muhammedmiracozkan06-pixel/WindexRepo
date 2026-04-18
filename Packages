@@ -1,7 +1,5 @@
 Package: windex-core
 Version: 26.5
 Architecture: all
-Maintainer: Muhammed Mirac Ozkan <mirac@windex.com>
-Filename: ./windex-core.deb
 Size: 1024
-Description: Windex OS Ara güncelleme paketi - Test Klasoru
+Description: 26H0 test update
