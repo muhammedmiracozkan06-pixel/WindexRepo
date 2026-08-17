@@ -1,23 +1,27 @@
 #!/usr/bin/env python3
 import os
+import sys
 
-def create_test_folder():
-    # Kullanıcının masaüstü yolunu sistemden dinamik olarak çeker
-    desktop_path = os.path.expanduser("~/Desktop")
-    
-    # Masaüstü Türkçe sistemlerde "Masaüstü" olabileceği için kontrol
-    if not os.path.exists(desktop_path):
-        tr_desktop = os.path.expanduser("~/Masaüstü")
-        if os.path.exists(tr_desktop):
-            desktop_path = tr_desktop
+print("[+] update.py çalıştırılıyor...")
 
-    test_folder = os.path.join(desktop_path, "test")
+# Hedef dizin ve dosya yolları
+target_dir = "/Windex/Test/sys"
+target_file = os.path.join(target_dir, "test.txt")
 
-    try:
-        os.makedirs(test_folder, exist_ok=True)
-        print(f"[WindexOS] Test klasörü başarıyla oluşturuldu: {test_folder}")
-    except Exception as e:
-        print(f"[WindexOS] Klasör oluşturulurken hata: {e}")
+try:
+    # Dizini oluştur (yoksa)
+    print(f"[+] Dizin kontrol ediliyor/oluşturuluyor: {target_dir}")
+    os.makedirs(target_dir, exist_ok=True)
 
-if __name__ == "__main__":
-    create_test_folder()
+    # Dosyayı oluştur ve içeriği yaz
+    print(f"[+] Dosya yazılıyor: {target_file}")
+    with open(target_file, "w", encoding="utf-8") as f:
+        f.write("testt\n")
+
+    print("[+] Dosya başarıyla oluşturuldu!")
+    print("Tmm!")
+    sys.exit(0)
+
+except Exception as e:
+    print(f"[-] Güncelleme sırasında hata oluştu: {e}")
+    sys.exit(1)
