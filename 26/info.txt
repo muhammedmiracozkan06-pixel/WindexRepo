@@ -1,0 +1,2 @@
+version:NX260U
+description:Test guncellemesi. Unutmayın! Güncelleme sırasında PC'nizi kullanamazsınız. Lütfen cihazınızın prize bağlı olduğundan veya yeterli şarjı olduğundan (%85 üstü sağlıklı bataryalar için öneririz.) emin olun.
